@@ -67,7 +67,7 @@ contract Raffle is VRFConsumerBaseV2, AutomationCompatibleInterface {
     //Function
 
     //Enter Raffel 
-    function enterRaffel() public payable {
+    function enterRaffle() public payable {
         if (msg.value < i_entranceFee) {
             revert Raffle__SendMoreToEnterRaffle();
         }
@@ -77,6 +77,7 @@ contract Raffle is VRFConsumerBaseV2, AutomationCompatibleInterface {
         }
 
         s_players.push(payable(msg.sender));
+
         emit RaffleEnter(msg.sender);
     }
 
