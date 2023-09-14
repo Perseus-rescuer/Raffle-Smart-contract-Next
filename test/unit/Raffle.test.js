@@ -1,7 +1,6 @@
 const { assert, expect } = require("chai")
-const { network, deployments } = require("hardhat")
+const { network, deployments, ethers } = require("hardhat")
 const { developmentChains, networkConfig } = require("../../helper-hardhat-config")
-const { ethers } = require("hardhat")
 
 !developmentChains.includes(network.name)
     ? describe.skip
@@ -53,20 +52,28 @@ const { ethers } = require("hardhat")
               })
 
               it("emits event on enter", async () => {
-                  await expect(raffle.enterRaffle({ value: raffleEntranceFee })).to.emit(
-                      raffle,
-                      "RaffleEnter",
-                  )
+                  await expect(raffle.enterRaffle({ value: raffleEntranceFee }))
+                      .to.emit(raffle, "RaffleEnter")
+                      .withArgs(player.address)
               })
 
               it("doesn't allow entrance when raffle is calculating", async () => {
-                  await raffle.enterRaffle({ value: raffleEntranceFee })
+                await raffle.enterRaffle({ value: raffleEntranceFee })
+                await network.provider.send("evm_increaseTime", [interval.toNumber() + 1])
+                await network.provider.request({ method: "evm_mine", params: [] })
+                await raffle.performUpkeep([])
+                await expect(raffle.enterRaffle({ value: raffleEntranceFee })).to.be.revertedWith( 
+                    "Raffle__RaffleNotOpen"
+                )
+            })
+          })
+
+          describe("checkUpkeep", () => {
+              it("returns false if people haven't sent any ETH", async () => {
                   await network.provider.send("evm_increaseTime", [interval.toNumber() + 1])
-                  await network.provider.request("evm_mine", [])
-                  await raffle.performUpkeep([]) // changes the state to calculating for our comparison below
-                  await expect(raffle.enterRaffle({ value: raffleEntranceFee })).to.be.revertedWith(
-                      "Raffle__RaffleNotOpen",
-                  )
+                  await network.provider.request({ method: "evm_mine", params: [] })
+                  const { upkeepNeeded } = await raffle.callStatic.checkUpkeep("0x")
+                  assert(!upkeepNeeded)
               })
           })
       })
