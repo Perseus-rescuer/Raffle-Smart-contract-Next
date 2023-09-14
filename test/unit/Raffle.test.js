@@ -58,5 +58,15 @@ const { ethers } = require("hardhat")
                       "RaffleEnter",
                   )
               })
+
+              it("doesn't allow entrance when raffle is calculating", async () => {
+                  await raffle.enterRaffle({ value: raffleEntranceFee })
+                  await network.provider.send("evm_increaseTime", [interval.toNumber() + 1])
+                  await network.provider.request("evm_mine", [])
+                  await raffle.performUpkeep([]) // changes the state to calculating for our comparison below
+                  await expect(raffle.enterRaffle({ value: raffleEntranceFee })).to.be.revertedWith(
+                      "Raffle__RaffleNotOpen",
+                  )
+              })
           })
       })
