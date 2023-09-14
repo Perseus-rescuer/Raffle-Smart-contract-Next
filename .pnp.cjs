@@ -672,8 +672,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@chainlink-contracts-npm-0.5.1-c925fcf8fa-24cb0c1c71.zip/node_modules/@chainlink/contracts/",\
           "packageDependencies": [\
             ["@chainlink/contracts", "npm:0.5.1"],\
-            ["@eth-optimism/contracts", "virtual:c925fcf8fa10daa2646d7850c49e6b203069acf2be389f980d450cd6d15060301e1112b5a874bb6f009d6f6f8c4eda0dbaed555af0095108f1044bc15fa76f78#npm:0.5.38"],\
-            ["@openzeppelin/contracts", "npm:4.8.0"],\
+            ["@eth-optimism/contracts", "virtual:c925fcf8fa10daa2646d7850c49e6b203069acf2be389f980d450cd6d15060301e1112b5a874bb6f009d6f6f8c4eda0dbaed555af0095108f1044bc15fa76f78#npm:0.5.40"],\
+            ["@openzeppelin/contracts", "npm:4.9.3"],\
             ["@openzeppelin/contracts-v0.7", [\
               "@openzeppelin/contracts",\
               "npm:3.4.2"\
@@ -796,18 +796,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:0.5.38", {\
-          "packageLocation": "./.yarn/cache/@eth-optimism-contracts-npm-0.5.38-a3c13973b9-a8080017cf.zip/node_modules/@eth-optimism/contracts/",\
+        ["npm:0.5.40", {\
+          "packageLocation": "./.yarn/cache/@eth-optimism-contracts-npm-0.5.40-91418f7802-11dde466c9.zip/node_modules/@eth-optimism/contracts/",\
           "packageDependencies": [\
-            ["@eth-optimism/contracts", "npm:0.5.38"]\
+            ["@eth-optimism/contracts", "npm:0.5.40"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:c925fcf8fa10daa2646d7850c49e6b203069acf2be389f980d450cd6d15060301e1112b5a874bb6f009d6f6f8c4eda0dbaed555af0095108f1044bc15fa76f78#npm:0.5.38", {\
-          "packageLocation": "./.yarn/__virtual__/@eth-optimism-contracts-virtual-a5f0fe70aa/0/cache/@eth-optimism-contracts-npm-0.5.38-a3c13973b9-a8080017cf.zip/node_modules/@eth-optimism/contracts/",\
+        ["virtual:c925fcf8fa10daa2646d7850c49e6b203069acf2be389f980d450cd6d15060301e1112b5a874bb6f009d6f6f8c4eda0dbaed555af0095108f1044bc15fa76f78#npm:0.5.40", {\
+          "packageLocation": "./.yarn/__virtual__/@eth-optimism-contracts-virtual-1757a28bd9/0/cache/@eth-optimism-contracts-npm-0.5.40-91418f7802-11dde466c9.zip/node_modules/@eth-optimism/contracts/",\
           "packageDependencies": [\
-            ["@eth-optimism/contracts", "virtual:c925fcf8fa10daa2646d7850c49e6b203069acf2be389f980d450cd6d15060301e1112b5a874bb6f009d6f6f8c4eda0dbaed555af0095108f1044bc15fa76f78#npm:0.5.38"],\
-            ["@eth-optimism/core-utils", "npm:0.11.0"],\
+            ["@eth-optimism/contracts", "virtual:c925fcf8fa10daa2646d7850c49e6b203069acf2be389f980d450cd6d15060301e1112b5a874bb6f009d6f6f8c4eda0dbaed555af0095108f1044bc15fa76f78#npm:0.5.40"],\
+            ["@eth-optimism/core-utils", "npm:0.12.0"],\
             ["@ethersproject/abstract-provider", "npm:5.7.0"],\
             ["@ethersproject/abstract-signer", "npm:5.7.0"],\
             ["@types/ethers", null],\
@@ -821,10 +821,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@eth-optimism/core-utils", [\
-        ["npm:0.11.0", {\
-          "packageLocation": "./.yarn/cache/@eth-optimism-core-utils-npm-0.11.0-f027d4ab26-20b788c243.zip/node_modules/@eth-optimism/core-utils/",\
+        ["npm:0.12.0", {\
+          "packageLocation": "./.yarn/cache/@eth-optimism-core-utils-npm-0.12.0-79e5c05a6c-1c820107c4.zip/node_modules/@eth-optimism/core-utils/",\
           "packageDependencies": [\
-            ["@eth-optimism/core-utils", "npm:0.11.0"],\
+            ["@eth-optimism/core-utils", "npm:0.12.0"],\
             ["@ethersproject/abi", "npm:5.7.0"],\
             ["@ethersproject/abstract-provider", "npm:5.7.0"],\
             ["@ethersproject/address", "npm:5.7.0"],\
@@ -839,7 +839,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ethersproject/rlp", "npm:5.7.0"],\
             ["@ethersproject/transactions", "npm:5.7.0"],\
             ["@ethersproject/web", "npm:5.7.1"],\
-            ["bufio", "npm:1.1.3"],\
+            ["bufio", "npm:1.2.1"],\
             ["chai", "npm:4.3.7"]\
           ],\
           "linkType": "HARD"\
@@ -2380,6 +2380,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@openzeppelin-contracts-npm-4.8.0-9f4e6c7d80-dfab51a7f9.zip/node_modules/@openzeppelin/contracts/",\
           "packageDependencies": [\
             ["@openzeppelin/contracts", "npm:4.8.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.9.3", {\
+          "packageLocation": "./.yarn/cache/@openzeppelin-contracts-npm-4.9.3-5ad99d59ab-4932063e73.zip/node_modules/@openzeppelin/contracts/",\
+          "packageDependencies": [\
+            ["@openzeppelin/contracts", "npm:4.9.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5345,10 +5352,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["bufio", [\
-        ["npm:1.1.3", {\
-          "packageLocation": "./.yarn/cache/bufio-npm-1.1.3-f9d4212c4a-e1340fc36d.zip/node_modules/bufio/",\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/bufio-npm-1.2.1-62497ff599-b6e1216f4a.zip/node_modules/bufio/",\
           "packageDependencies": [\
-            ["bufio", "npm:1.1.3"]\
+            ["bufio", "npm:1.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
