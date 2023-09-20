@@ -143,7 +143,9 @@ export const LotteryEntrance = () => {
             </h3>
           </>
         ) : (
-          <div>Please connect to a supported chain </div>
+          <RaffleContainer>
+            <div>Please connect to a supported chain </div>
+          </RaffleContainer>
         )}
       </RaffleContainer>
     </>
@@ -161,6 +163,7 @@ const RaffleContainer = styled.div`
   backdrop-filter: blur(10px);
   color: #ffffff;
   border-radius: 4px;
+  border-bottom: 1px solid rgb(239, 75, 37);
 
   box-shadow: rgba(34, 34, 34, 0.3) 0px 19px 38px,
     rgba(34, 34, 34, 0.22) 0px 25px 25px;
@@ -188,7 +191,6 @@ const RaffleContainer = styled.div`
       margin-bottom: 15px;
     }
   }
-
   button {
     margin: 40px 0px 40px 0px;
     display: flex;
