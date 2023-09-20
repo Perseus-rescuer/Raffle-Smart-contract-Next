@@ -1,8 +1,11 @@
 .container {
   padding: 0 2rem;
   background-color: rgb(239, 75, 37, 0.7);
-  min-height: 100vh;
+  min-height: 87vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main {
