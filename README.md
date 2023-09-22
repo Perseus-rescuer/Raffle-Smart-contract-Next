@@ -10,10 +10,10 @@ This project is an innovative and exciting project that combines cutting-edge we
 **- Raffle completino and winner display**
   ![Screenshot 2023-09-22 at 23-18-33 Enter Raffle](https://github.com/rezowansifat/Decentralized-Lottery/assets/119602384/585137ce-5b5b-46be-85f3-bd7cd5c9a9ba)
 
+# Live Visit
+- [Vercel!](https://ethereumraffle.vercel.app/)
 
-[Live Visit -- Vercel!](https://ethereumraffle.vercel.app/)
-
-[Live Visit -- Fleek!](https://autumn-sea-1227.on.fleek.co/)
+- [Fleek!](https://autumn-sea-1227.on.fleek.co/)
 
 Developed Using:
 **NextJS**, **Solidity**, **Chainlink**, **Moralis**, **web3uikit**, **Ethers**, **Hardhat**, **IPFS**.
