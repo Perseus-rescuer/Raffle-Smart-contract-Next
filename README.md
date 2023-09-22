@@ -36,4 +36,4 @@ yarn
 yarn dev
 ```
 # Thank you!
-[![Rezowans Linkedin](https://www.linkedin.com/in/rezowan-sifat-341277266)
+[![Rezowans Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rezowan-sifat-341277266)
